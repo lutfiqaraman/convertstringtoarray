@@ -10,6 +10,17 @@ namespace convertstringtoarray
     {
         static void Main(string[] args)
         {
+            string str = "I love arrays they are my favorite";
+
+            string[] container = (from c in str.Split()
+                                 select c into words
+                                 select words).ToArray();
+
+            foreach (var item in container)
+                Console.WriteLine(item);
+
+            Console.ReadKey();
+
         }
     }
 }
