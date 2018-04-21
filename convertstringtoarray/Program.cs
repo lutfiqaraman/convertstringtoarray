@@ -10,10 +10,10 @@ namespace convertstringtoarray
     {
         static void Main(string[] args)
         {
-            string str = "I love arrays they are my favorite";
+            string str = "Convert this string to an array of string";
 
-            string[] container = (from c in str.Split()
-                                 select c).ToArray();
+            string[] container = (from words in str.Split()
+                                 select words).ToArray();
 
             foreach (var item in container)
                 Console.WriteLine(item);
