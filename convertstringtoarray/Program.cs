@@ -13,8 +13,7 @@ namespace convertstringtoarray
             string str = "I love arrays they are my favorite";
 
             string[] container = (from c in str.Split()
-                                 select c into words
-                                 select words).ToArray();
+                                 select c).ToArray();
 
             foreach (var item in container)
                 Console.WriteLine(item);
